@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>MyMusicPlayer</title>
+        <link rel="stylesheet" href="file.css" />
+    </head>
+    <body onload="fade()">
+        <div id="grid-container" class="grid-container">
+            <div class="selecionar">
+                <h2>Selecionar Musicas</h2>
+            </div>
+
+            <div id="musicas" class="musicas">
+                <div id="faixa" class="faixa">
+                    <div>
+                        <img id="img" src="/img/img.jpg" />
+                        <audio id="music" src="/musicas/music1.mp3"></audio>
+                    </div>
+                    <div>
+                        <h3 id="nomeDaFaixa">Levi vs Jaw Titan EP6 Shingeki</h3>
+                        <p>When levi cut the jaw of jaw Titan</p>
+                    </div>
+                </div>
+
+                <div id="faixa" class="faixa">
+                    <div>
+                        <img id="img" src="/img/img2.jpg" />
+                        <audio id="music" src="/musicas/music2.mp3"></audio>
+                    </div>
+                    <div>
+                        <h3 id="nomeDaFaixa">
+                            Bloodbath - Eaten / Black Version
+                        </h3>
+                        <p>A such of piece death and Black Metal</p>
+                    </div>
+                </div>
+
+                <div id="faixa" class="faixa">
+                    <div>
+                        <img id="img" src="/img/img3.jpg" />
+                        <audio id="music" src="/musicas/music3.mp3"></audio>
+                    </div>
+                    <div>
+                        <h3 id="nomeDaFaixa">
+                            Reiner and Bertolt Reveal Theme
+                        </h3>
+                        <p>Reiner and Bertolt Epic Scene Titan Reveal AOT</p>
+                    </div>
+                </div>
+
+                <div id="faixa" class="faixa">
+                    <div>
+                        <img id="img" src="/img/img4.jpg" />
+                        <audio id="music" src="/musicas/music4.mp3"></audio>
+                    </div>
+                    <div>
+                        <h3 id="nomeDaFaixa">
+                            Shinzou wo Sasageyo - OST Opening
+                        </h3>
+                        <p>Sasageyo kimyo sasageyo uh uh</p>
+                    </div>
+                </div>
+
+                <div id="faixa" class="faixa">
+                    <div>
+                        <img id="img" src="/img/img5.jpg" />
+                        <audio id="music" src="/musicas/music5.mp3"></audio>
+                    </div>
+                    <div>
+                        <h3 id="nomeDaFaixa">The Floor Is Lava - NCS</h3>
+                        <p>The Floor Is Lava song no copyright</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nome">
+                <h2 id="nomeDaMusica"></h2>
+            </div>
+
+            <div class="musicaPlayer">
+                <div class="mostrarInfo">
+                    <img id="imgDaMusica" />
+                    <audio id="audioDaMusica"></audio>
+                </div>
+                <div class="trackSlider">
+                    <input
+                        onchange="changeDuration()"
+                        type="range"
+                        name="time"
+                        id="time"
+                        style="display: none"
+                    />
+                </div>
+                <div id="controllers">
+                    <img id="repeat" src="/icons/repeat.png" />
+                    <img id="prev" src="/icons/prev.png" />
+                    <img id="toPlay" src="/icons/paused.png" />
+                    <img id="next" src="/icons/next.png" />
+                    <img id="noVolume" src="/icons/maxvolume.png" />
+                    <input type="range" name="volumeRange" id="volumeRange" />
+                    <p id="volumeShow"></p>
+                </div>
+            </div>
+        </div>
+        <p id="copy" style="margin-top: 10px">&copy;GuilhermeVialle</p>
+        <script src="app.js"></script>
+    </body>
+</html>

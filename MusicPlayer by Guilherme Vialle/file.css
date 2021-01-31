@@ -1,0 +1,505 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#96fbc4), to(#f9f586));
+  background-image: linear-gradient(to top, #96fbc4 0%, #f9f586 100%);
+}
+
+.grid-container {
+  opacity: 0;
+  border-radius: 40px;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#dbffeb), to(#fffeda));
+  background-image: linear-gradient(to top, #dbffeb 0%, #fffeda 100%);
+  width: 70%;
+  height: 90vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+      grid-template-areas: "selecionar selecionar nome nome" "musicas musicas musicaPlayer musicaPlayer" "musicas musicas musicaPlayer musicaPlayer";
+  -webkit-box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+          box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-transform: translateY(-500px);
+          transform: translateY(-500px);
+}
+
+.selecionar {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: selecionar;
+}
+
+.selecionar h2 {
+  font-weight: 500;
+}
+
+.nome {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-area: nome;
+  background-color: #333;
+  color: white;
+  border-top-right-radius: 40px;
+}
+
+#nomeDaMusica {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: 400;
+  text-align: center;
+  color: #6fdb9a;
+}
+
+.musicaPlayer {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-area: musicaPlayer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #333;
+  border-bottom-right-radius: 40px;
+}
+
+.musicaPlayer img {
+  max-width: 398px;
+}
+
+.musicas {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: musicas;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.musicas::-webkit-scrollbar {
+  width: 1px;
+}
+
+.musicas::-webkit-scrollbar-track {
+  background: #e8ffc6;
+}
+
+.musicas::-webkit-scrollbar-thumb {
+  background: #dcffa7;
+}
+
+.musicas::-webkit-scrollbar-thumb:hover {
+  background: #364e12;
+}
+
+.musicas div {
+  width: 100%;
+  height: 100px;
+  cursor: pointer;
+  -webkit-transition: 0.2s all ease;
+  transition: 0.2s all ease;
+}
+
+.musicas div:hover {
+  background-color: #e4e6eb;
+}
+
+.musicas:last-child:hover {
+  border-bottom-left-radius: 40px;
+}
+
+#controllers {
+  margin-bottom: 4px;
+  width: 100%;
+  height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: none;
+}
+
+#controllers img {
+  max-width: 32px;
+  display: block;
+  cursor: pointer;
+  margin: 0px 12px;
+  border: 3px solid transparent;
+  border-radius: 20px;
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+#controllers img:hover {
+  -webkit-transform: scale(1.2, 1.2);
+          transform: scale(1.2, 1.2);
+  border-top: 3px outset #cc4f63;
+}
+
+#controllers .repeaterIconToggle {
+  border-top: 3px outset #05833a;
+}
+
+#controllers input[type="range"] {
+  width: 100px;
+  margin: 7.2px 25px;
+  background-color: transparent;
+  -webkit-appearance: none;
+}
+
+#controllers input[type="range"]:focus {
+  outline: none;
+}
+
+#controllers input[type="range"]::-webkit-slider-runnable-track {
+  background: rgba(184, 255, 199, 0.4);
+  border: 0.1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.5px;
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+}
+
+#controllers input[type="range"]::-webkit-slider-thumb {
+  margin-top: -7.3px;
+  width: 9px;
+  height: 16px;
+  background: #6fdb9a;
+  border: 1.6px solid #008d6d;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+
+#controllers input[type="range"]:focus::-webkit-slider-runnable-track {
+  background: #bdffcb;
+}
+
+#controllers input[type="range"]::-moz-range-track {
+  background: rgba(184, 255, 199, 0.4);
+  border: 0.1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.5px;
+  width: 100%;
+  height: 4.6px;
+  cursor: pointer;
+}
+
+#controllers input[type="range"]::-moz-range-thumb {
+  width: 9px;
+  height: 19px;
+  background: #6fdb9a;
+  border: 1.6px solid #008d6d;
+  cursor: pointer;
+}
+
+#controllers input[type="range"]::-ms-track {
+  background: transparent;
+  border-color: transparent;
+  border-width: 7.2px 0;
+  color: transparent;
+  width: 100%;
+  height: 4.6px;
+  cursor: pointer;
+}
+
+#controllers input[type="range"]::-ms-fill-lower {
+  background: #b3ffc3;
+  border: 0.1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 1px;
+}
+
+#controllers input[type="range"]::-ms-fill-upper {
+  background: rgba(184, 255, 199, 0.4);
+  border: 0.1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 1px;
+}
+
+#controllers input[type="range"]::-ms-thumb {
+  width: 9px;
+  height: 19px;
+  background: #6fdb9a;
+  border: 1.6px solid #008d6d;
+  cursor: pointer;
+  margin-top: 0px;
+  /*Needed to keep the Edge thumb centred*/
+}
+
+#controllers input[type="range"]:focus::-ms-fill-lower {
+  background: rgba(184, 255, 199, 0.4);
+}
+
+#controllers input[type="range"]:focus::-ms-fill-upper {
+  background: #bdffcb;
+}
+
+#volumeShow {
+  position: absolute;
+  width: 50px;
+  max-height: 22px;
+  background-color: #6fdb9a;
+  padding: 10px;
+  border-radius: 15px;
+  right: 0;
+  bottom: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 73px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  font-size: 0.8rem;
+}
+
+#volumeShow:hover {
+  opacity: 0.8;
+}
+
+.selecionar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nome {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.faixa {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 40px;
+}
+
+.faixa > div {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.faixa img {
+  border-radius: 2px;
+  max-width: 100px;
+  border: 3px solid #333;
+}
+
+.faixa h3 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.faixa p {
+  font-size: 0.8rem;
+}
+
+.mostrarInfo {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+audio {
+  width: 85%;
+  outline: none;
+}
+
+audio::-webkit-media-controls-panel {
+  width: 200px;
+}
+
+input[type="range"] {
+  width: 100%;
+  margin: 30px 0;
+  background-color: transparent;
+  -webkit-appearance: none;
+}
+
+input[type="range"]:focus {
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  background: #31ce56;
+  border: 0.2px solid white;
+  border-radius: 1.3px;
+  width: 100%;
+  height: 2.1px;
+  cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  margin-top: -8.65px;
+  width: 5px;
+  height: 19px;
+  background: rgba(37, 175, 102, 0.8);
+  border: 1.8px solid #333;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+
+input[type="range"]:focus::-webkit-slider-runnable-track {
+  background: #c9f2d3;
+}
+
+input[type="range"]::-moz-range-track {
+  background: #31ce56;
+  border: 0.2px solid white;
+  border-radius: 1.3px;
+  width: 100%;
+  height: 2.1px;
+  cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 5px;
+  height: 19px;
+  background: rgba(37, 175, 102, 0.8);
+  border: 1.8px solid white;
+  cursor: pointer;
+}
+
+input[type="range"]::-ms-track {
+  background: transparent;
+  border-color: transparent;
+  border-width: 8.45px 0;
+  color: transparent;
+  width: 100%;
+  height: 2.1px;
+  cursor: pointer;
+}
+
+input[type="range"]::-ms-fill-lower {
+  background: #0d3616;
+  border: 0.2px solid white;
+  border-radius: 2.6px;
+}
+
+input[type="range"]::-ms-fill-upper {
+  background: #31ce56;
+  border: 0.2px solid white;
+  border-radius: 2.6px;
+}
+
+input[type="range"]::-ms-thumb {
+  width: 5px;
+  height: 19px;
+  background: rgba(37, 175, 102, 0.8);
+  border: 1.8px solid white;
+  cursor: pointer;
+  margin-top: 0px;
+  /*Needed to keep the Edge thumb centred*/
+}
+
+input[type="range"]:focus::-ms-fill-lower {
+  background: #31ce56;
+}
+
+input[type="range"]:focus::-ms-fill-upper {
+  background: #c9f2d3;
+}
+
+#copy {
+  opacity: 0;
+  -webkit-transform: translateX(200px);
+          transform: translateX(200px);
+  -webkit-transition: 0.4s linear;
+  transition: 0.4s linear;
+}
+/*# sourceMappingURL=file.css.map */
