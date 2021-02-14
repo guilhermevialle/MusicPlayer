@@ -11,7 +11,10 @@
 
 ### Screenshots
 
+- #### It is possible to choose the songs like a list
 ![](https://github.com/guilhermevialle/MusicPlayer/blob/main/MusicPlayer%20by%20Guilherme%20Vialle/Screenshots/capture.PNG)
+
+- #### The current song being played is shown on the display
 ![](https://github.com/guilhermevialle/MusicPlayer/blob/main/MusicPlayer%20by%20Guilherme%20Vialle/Screenshots/capture2.PNG)
 
 
