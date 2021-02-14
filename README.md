@@ -13,7 +13,9 @@
 ![](https://github.com/guilhermevialle/MusicPlayer/blob/main/MusicPlayer%20by%20Guilherme%20Vialle/Screenshots/capture2.PNG)
 
 
-#### Media Social
+------------
+
+#### Social Media
 
 - https://twitter.com/guivialle
 - https://www.instagram.com/guilherme.vialle/?hl=pt-br
