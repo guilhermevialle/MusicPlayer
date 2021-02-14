@@ -5,6 +5,8 @@ Music-Player with Vanilla JavaScript. Note: I did this project just to test my k
 - Cool Design;
 - Lite;
 
+#### Screenshots
+
 #### Media Social
 
 - https://twitter.com/guivialle
