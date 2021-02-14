@@ -7,7 +7,7 @@
 - Cool Design
 - Lite
 
-#### Screenshots
+### Screenshots
 
 ![](https://github.com/guilhermevialle/MusicPlayer/blob/main/MusicPlayer%20by%20Guilherme%20Vialle/Screenshots/capture.PNG)
 ![](https://github.com/guilhermevialle/MusicPlayer/blob/main/MusicPlayer%20by%20Guilherme%20Vialle/Screenshots/capture2.PNG)
