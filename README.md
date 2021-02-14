@@ -7,5 +7,5 @@ Music-Player with Vanilla JavaScript. Note: I did this project just to test my k
 
 #### Media Social
 
-![](https://github.com/paulrobertlloyd/socialmediaicons/blob/main/twitter-32x32.png) 
 - https://twitter.com/guivialle
+- https://www.instagram.com/guilherme.vialle/?hl=pt-br
