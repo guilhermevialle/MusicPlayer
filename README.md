@@ -9,7 +9,7 @@
 - Cool Design
 - Lite
 
-### Screenshots
+### Preview
 
 - #### It is possible to choose the songs like a list
 ![](https://github.com/guilhermevialle/MusicPlayer/blob/main/MusicPlayer%20by%20Guilherme%20Vialle/Screenshots/capture.PNG)
